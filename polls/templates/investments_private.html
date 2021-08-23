@@ -1,0 +1,1914 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Your Investments {% endblock %}
+{% block content %}
+<script>
+$(document).ready(function (){
+    var ctx = document.getElementById('pool-fund-3').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
+            datasets: [{
+                label: 'Value',
+                data: ['65','68','72','77','73','75','80','86','77','98','102','104'],
+                borderColor: '#00c9c6',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'ESG Mutual Fund 3 Forecast'
+        },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        display: true,
+                        labelString: 'Year: 2021'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+});
+$(document).ready(function (){
+    var ctx = document.getElementById('pool-fund-1').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
+            datasets: [{
+                label: 'Value',
+                data: ['65','68','72','77','73','75','80','86','77','98','102','104'],
+                borderColor: '#00c9c6',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'ESG Mutual Fund 1 Forecast'
+        },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        display: true,
+                        labelString: 'Year: 2021'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+});
+$(document).ready(function (){
+    var ctx = document.getElementById('pool-fund-2').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
+            datasets: [{
+                label: 'Value',
+                data: ['68','62','72','77','68','75','86','80','77','93','106','110'],
+                borderColor: '#00c9c6',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'ESG Mutual Fund 2 Forecast'
+        },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        display: true,
+                        labelString: 'Year: 2021'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('closed-fund-1').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
+            datasets: [{
+                label: 'Value',
+                data: ['68','62','72','77','68','75','86','80','77','93','106','110'],
+                borderColor: '#00c9c6',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Closed-End Fund 1 Forecast'
+        },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        display: true,
+                        labelString: 'Year: 2021'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+});
+$(document).ready(function (){
+    var ctx = document.getElementById('closed-fund-2').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
+            datasets: [{
+                label: 'Value',
+                data: ['65','68','72','77','73','75','80','86','77','98','102','104'],
+                borderColor: '#00c9c6',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Closed-End Fund 2 Forecast'
+        },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        display: true,
+                        labelString: 'Year: 2021'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+});
+$(document).ready(function (){
+    var ctx = document.getElementById('closed-fund-3').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
+            datasets: [{
+                label: 'Value',
+                data: ['65','68','72','77','73','75','80','86','77','98','102','104'],
+                borderColor: '#00c9c6',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Closed-End Fund 3 Forecast'
+        },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        display: true,
+                        labelString: 'Year: 2021'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+});
+
+$(document).ready(function() {
+  prep_modal();
+});
+
+function prep_modal()
+{
+  $(".modal").each(function() {
+
+  var element = this;
+	var pages = $(this).find('.modal-split');
+
+  if (pages.length != 0)
+  {
+    	pages.hide();
+    	pages.eq(0).show();
+
+    	var b_button = document.createElement("button");
+                b_button.setAttribute("type","button");
+          			b_button.setAttribute("class","btn button-new");
+          			b_button.setAttribute("style","display: none;");
+          			b_button.innerHTML = "Back";
+
+    	var n_button = document.createElement("button");
+                n_button.setAttribute("type","button");
+          			n_button.setAttribute("class","btn button-new");
+          			n_button.innerHTML = "Next";
+
+    	$(this).find('.modal-footer').append(b_button).append(n_button);
+
+
+    	var page_track = 0;
+
+    	$(n_button).click(function() {
+
+        this.blur();
+
+    		if(page_track == 0)
+    		{
+    			$(b_button).show();
+    		}
+
+    		if(page_track == pages.length-2)
+    		{
+    			$(n_button).text("Confirm");
+    		}
+
+        if(page_track == pages.length-1)
+        {
+            document.getElementById("investmentForm").submit();
+          //$(element).find("form").submit();
+        }
+
+    		if(page_track < pages.length-1)
+    		{
+    			page_track++;
+
+    			pages.hide();
+    			pages.eq(page_track).show();
+    		}
+
+
+    	});
+
+    	$(b_button).click(function() {
+
+    		if(page_track == 1)
+    		{
+    			$(b_button).hide();
+    		}
+
+    		if(page_track == pages.length-1)
+    		{
+    			$(n_button).text("Next");
+    		}
+
+    		if(page_track > 0)
+    		{
+    			page_track--;
+
+    			pages.hide();
+    			pages.eq(page_track).show();
+    		}
+
+
+    	});
+
+  }
+
+  });
+}
+
+function showCards1() {
+  var x = document.getElementById("cardDiv1");
+  var xa = document.getElementById("cardDiv11");
+  var ya = document.getElementById("cardDiv12");
+  var y = document.getElementById("cardDiv2");
+  var z = document.getElementById("cardDiv3");
+  var za = document.getElementById("cardDiv13");
+  if (x.style.display === "none") {
+      z.style.display = "none";
+      za.style.display = "none";
+      y.style.display = "none";
+      ya.style.display = "none";
+      x.style.display = "block";
+      xa.style.display = "block";
+  }
+}
+function showCards2() {
+  var x = document.getElementById("cardDiv1");
+  var xa = document.getElementById("cardDiv11");
+  var ya = document.getElementById("cardDiv12");
+  var y = document.getElementById("cardDiv2");
+  var z = document.getElementById("cardDiv3");
+  var za = document.getElementById("cardDiv13");
+  if (y.style.display === "none") {
+      z.style.display = "none";
+      za.style.display = "none";
+      x.style.display = "none";
+      xa.style.display = "none";
+      y.style.display = "block";
+      ya.style.display = "block";
+  }
+}
+function showCards3() {
+  var x = document.getElementById("cardDiv1");
+  var xa = document.getElementById("cardDiv11");
+  var ya = document.getElementById("cardDiv12");
+  var y = document.getElementById("cardDiv2");
+  var z = document.getElementById("cardDiv3");
+  var za = document.getElementById("cardDiv13");
+  if (z.style.display === "none") {
+      x.style.display = "none";
+      xa.style.display = "none";
+      y.style.display = "none";
+      ya.style.display = "none";
+      z.style.display = "block";
+      za.style.display = "block";
+  }
+}
+
+function showFunds1() {
+  var x = document.getElementById("cardDiv01");
+  var xa = document.getElementById("cardDiv21");
+  var ya = document.getElementById("cardDiv22");
+  var y = document.getElementById("cardDiv02");
+  var z = document.getElementById("cardDiv03");
+  var za = document.getElementById("cardDiv23");
+  if (x.style.display === "none") {
+      z.style.display = "none";
+      za.style.display = "none";
+      y.style.display = "none";
+      ya.style.display = "none";
+      x.style.display = "block";
+      xa.style.display = "block";
+  }
+}
+function showFunds2() {
+  var x = document.getElementById("cardDiv01");
+  var xa = document.getElementById("cardDiv21");
+  var ya = document.getElementById("cardDiv22");
+  var y = document.getElementById("cardDiv02");
+  var z = document.getElementById("cardDiv03");
+  var za = document.getElementById("cardDiv23");
+  if (y.style.display === "none") {
+      z.style.display = "none";
+      za.style.display = "none";
+      x.style.display = "none";
+      xa.style.display = "none";
+      y.style.display = "block";
+      ya.style.display = "block";
+  }
+}
+function showFunds3() {
+  var x = document.getElementById("cardDiv01");
+  var xa = document.getElementById("cardDiv21");
+  var ya = document.getElementById("cardDiv22");
+  var y = document.getElementById("cardDiv02");
+  var z = document.getElementById("cardDiv03");
+  var za = document.getElementById("cardDiv23");
+  if (z.style.display === "none") {
+      x.style.display = "none";
+      xa.style.display = "none";
+      y.style.display = "none";
+      ya.style.display = "none";
+      z.style.display = "block";
+      za.style.display = "block";
+  }
+}
+</script>
+    <div class="container" style="min-width: 1200px;">
+    <div class="main-body">
+        <nav class="navbar navbar-light bg-white sticky-top">
+                <a class="navbar-brand" href="https://www.cliommit.com/">
+                  <img src="{% static 'images/cliommit_logo_green.svg'%}" height="30" loading="lazy"/>
+                </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Edit Profile &emsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Settings &emsp;&emsp;<i class="fa fa-gear" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Help &emsp;&emsp;&emsp;&emsp;<i class="fa fa-question" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Log-out &emsp;&emsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+            </nav>
+        <br>
+        <div class="row gutters-sm">
+            <div class="col-md-3 mb-3">
+                <div class="sticky-top" style="top:70px;">
+                <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                      <div>
+                          <img type="image" src="{% static 'images/share-now.png'%}" alt="IMG" style="max-width: 250px;">
+                      </div>
+                  </div>
+                </div>
+              </div>
+                <br>
+                <div class="row">
+                  <div class="col-12">
+                      <div class="card" style="background-color: #f8f9fa;">
+                          <div class="card-body">
+                            <div role="group" aria-label="Vertical button group" style="width: 100%;">
+                              <!--suppress CssInvalidPropertyValue -->
+                              <a href="{% url 'polls:home' id=1%}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Profile</b>
+                              </a>
+                              <a href="{% url 'polls:investments' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Investment Pool</b>
+                              </a>
+                              <a href="" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Investment Portfolios</b>
+                              </a>
+                              <a href="{% url 'polls:statistics' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Analytics</b>
+                              </a>
+                              <a href="{% url 'polls:strategies'%}" class="btn button-new" style="min-width:-webkit-fill-available">
+                                  <b>Strategies</b>
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-12">
+                      <div class="card">
+                          <div class="card-body">
+                            <h4 class="mb-2">Media Section</h4>
+                              <div style="height: 244px; overflow-y: scroll;">
+                               <ul>
+                                  <li>
+                                      <img src="https://static.independent.co.uk/2021/04/21/11/newFile-2.jpg?width=640&auto=webp&quality=75" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="http://www.blackstarnews.com/sites/default/files/styles/news-detail-page/public/field/image/Screenshot%202021-06-17%20at%2010-34-53%20Climate-Related%20Migration%20youtube%20-%20Google%20Search.png?itok=HCDmQT88" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="https://onlinepublichealth.gwu.edu/wp-content/uploads/sites/47/2021/03/54-Sources-for-Climate-Change-News-hero.jpeg?w=1024" style="width: 230px;">
+                                  </li>
+                               </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-5 mb-3">
+                    <div id="accordion">
+                      <div class="card" style="min-width: 850px; background-color: #f8f9fa;">
+                          <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="box-shadow: none;">
+                            <div class="card-header" id="headingOne" style="background-color: white;">
+                              <h5 class="mb-0">
+                                  Introduction
+                                  <span style="position: relative; left: 320px; right: 10px;">
+                                  <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                  </span>
+                              </h5>
+                            </div>
+                          </button>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="max-width: 850px;">
+                          <div class="card-header" style="background-color: #f8f9fa;">
+                            Welcome to the investments page, here you can see where we channel your investments, you can invest company profits to support
+                              sustainable initiatives, reduce your Co2e and send a message to your stakeholders that you are committed to supporting sustainable future.
+                          </div>
+                        </div>
+                          <br>
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Open Funds</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Closed-End Funds</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Green Bonds</a>
+                            </li>
+                          </ul><!-- Tab panes -->
+                          <br>
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="row">
+                                  <div class="col-md-3 mb-4 ml-4">
+                                    <p>
+                                      <button class="btn button-new" onclick="showCards1()">ESG Mutual Fund 1</button><br><br>
+                                      <button class="btn button-new" onclick="showCards2()">ESG Mutual Fund 2</button><br><br>
+                                      <button class="btn button-new" onclick="showCards3()">ESG Mutual Fund 3</button><br><br>
+                                    </p>
+                                  </div>
+                                    <div class="col-md-8 mb-4 ml-4" id="cardDiv1">
+                                        <div class="card card-body">
+                                            <b>Swissconto equity fund AA</b><br>
+                                            The fund invests worldwide in equities of companies that contribute to
+                                            solving social sustainability problems. This is a question of decoupling
+                                            economic growth from the consumption of resources and the promotion
+                                            of equal opportunities. The focus is on companies undergoing profitable
+                                            growth in the long term thanks to their sustainable products or services,
+                                            because they have high entry barriers. The fund is actively managed and
+                                            stocks are selected on the basis of fundamental company analyses. The
+                                            sustainability approaches applied, are described in the factsheet from the organisation
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 mb-4 ml-4" id="cardDiv2" style="display: none">
+                                        <div class="card card-body">
+                                            <b>Calvert Equity Fund USA</b><br>
+                                            The Fund applies a fundamental approach to investing, primarily in
+                                            established large-cap stocks with a history of sustained earnings growth at
+                                            a favorable price. The Calvert Principles for Responsible Investment (Calvert
+                                            Principles) provide a framework for the evaluation of ESG factors and guide our
+                                            active engagement efforts with company managements. The Fund seeks to invest in quality
+                                            companies with a demonstrated history of earnings growth, strong
+                                            cash flow and high returns on capital. The sustainability approaches applied,
+                                            are described in the factsheet from the organisation
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 mb-4 ml-4" id="cardDiv3" style="display: none">
+                                        <div class="card card-body">
+                                            <b>Lux-konto equity fund AA</b><br>
+                                            The fund seeks to track the investment results of an index composed of U.S.
+                                            companies that have positive environmental, social and governance characteristics
+                                            as identified by the index provider while exhibiting risk and return characteristics
+                                            similar to those of the parent index. The focus is on companies undergoing profitable
+                                            growth in the long term thanks to their sustainable products or services,
+                                            because they have high entry barriers. The fund is actively managed and
+                                            stocks are selected on the basis of fundamental company analyses. The
+                                            sustainability approaches applied, are described in the factsheet from the organisation
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" id="cardDiv11">
+                                    <div class="row">
+                                        <div class="col-md-3.5 mb-4 ml-4">
+                                            <div class="card card-body">
+                                                <h5 class="mb-3">
+                                                    Account Details
+                                                </h5>
+                                                <b class="mt-2">Name:</b> Swissconto equity fund AA<br>
+                                                <b class="mt-2">ISIN:</b> 1357517345<br>
+                                                <b class="mt-2">Bloomberg:</b> JGF1234H<br>
+                                                <b class="mt-2">WKN:</b> 216770
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-4 ml-4">
+                                            <button class="btn button-new mb-2" style="min-width: 182.5px;">Download Factsheet</button>
+                                            <button class="btn button-new mb-3" data-toggle="modal" data-target="#myModal" style="min-width: 182.5px;">Invest</button>
+                                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                              <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h4 class="modal-title" id="myModalLabel">Transfer Set-up</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <div class="modal-split">
+                                                        <h5>Thanks for choosing to invest with Swissconto equity fund AA.<br>
+                                                            To get started with your sustainable investments
+                                                            we will need a few details from the account you wish to make payments from.
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Swissconto equity fund AA</h5><br>
+                                                                    <b>Fund Info:</b> The fund invests worldwide in equities of companies that contribute to
+                                                                    solving social sustainability problems<br><br>
+                                                                    <b>ISIN:</b> 1357517345<br><br>
+                                                                    <b>MSCI Rating:</b> AA
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Provide Payment Information</h5><br>
+                                                                    <form id="investmentForm" action="{% url 'polls:addInvestment' %}" method="post">
+                                                                      {% csrf_token %}
+                                                                      <div class="form-group">
+                                                                        <label for="organization">Organization Name:</label>
+                                                                        {{ form.organization }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="authorizer">Authorizer Name:</label>
+                                                                        {{ form.authorizer }}
+                                                                      </div>
+                                                                       <div class="form-group">
+                                                                        <label for="bank">Bank Name:</label>
+                                                                        {{ form.bank_name }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="account">Account Number:</label>
+                                                                        {{ form.account_number }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="amount">Pledged Amount</label>
+                                                                        {{ form.amount }}
+                                                                      </div>
+                                                                    </form>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <h5></h5>
+                                                                <p>
+                                                                    For the purpose of secure transfer you have been assigned a Vitual Account/IBAN.
+                                                                </p><br>
+                                                                <p>
+                                                                    Please use these details to deposit your investment amount from your account
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h5>Please send your funds to your virtual account IBAN</h5><br>
+                                                                    <form>
+                                                                      <div class="form-group">
+                                                                          <label for="bank">Bank Name</label>
+                                                                          <input type="text" class="form-control" id="bank" placeholder="BNP Paribas Berlin" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="iban">IBAN</label>
+                                                                          <input type="text" class="form-control" id="iban" placeholder="BE25 1024 0000 2100 8578 74155" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="bic">BIC</label>
+                                                                          <input type="text" class="form-control" id="bic" placeholder="BEGU98TXXX" readonly>
+                                                                      </div>
+                                                                    </form>
+                                                                <p>
+                                                                    Once the funds have been transferred you will recieve an approval on your account
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <div class="card card-body mb-3" style="min-width: 166.83px;">
+                                                <b style="color: #00c9c6; text-align: center; font-size: large;">YIELD: 3.5%</b>
+                                            </div>
+                                            <div class="card card-body" style="min-width: 166.83px;">
+                                                <img type="image" src="{% static 'images/msci-rating.png'%}" alt="IMG">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 mb-4 ml-3">
+                                            <div class="card card-body">
+                                                <h5 class="mb-4">
+                                                    Impact
+                                                </h5>
+                                                <b>Energy:</b> Your company has helped in 3 green energy projects
+                                                <br>
+                                                <b>Health:</b> An amount of € 100,592.00 was invested in the health sector
+                                                <br>
+                                                <b>Bio-diversity:</b> 331 trees have been planted through your pools investment
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-7 mb-4 ml-0">
+                                            <div class="card">
+                                              <div class="card-body">
+                                               <canvas id="pool-fund-1" width="600" height="450"></canvas>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5.1 mb-4 ml-0">
+                                            <div class="card">
+                                          <div class="card-body">
+                                            <h5 class="mb-0">
+                                               Performance Data
+                                            </h5>
+                                            <table class="table table-striped">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col" style="color: #545252">Fees</th>
+                                                  <th scope="col"> </th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="row">Max. initial charge in %</th>
+                                                  <td style="color: #00c95a;">3.00%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Service/Management fee p.a. in %</th>
+                                                  <td style="color: #00c95a;">1.00%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row" style="color: #545252">Portfolio Characteristics</th>
+                                                  <td> </td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Volatility</th>
+                                                  <td style="color: #00c95a;">14.65%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Sharp Ratio</th>
+                                                  <td style="color: #e71c1c;">-1.00</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Beta</th>
+                                                  <td style="color: #e71c1c;">-1.00</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" id="cardDiv12" style="display: none">
+                                    <div class="row">
+                                        <div class="col-md-3.5 mb-4 ml-4">
+                                            <div class="card card-body">
+                                                <h5 class="mb-3">
+                                                    Account Details
+                                                </h5>
+                                                <b class="mt-2">Name:</b> Calvert Equity Fund USA &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                                <b class="mt-2">ISIN:</b> 1458504576<br>
+                                                <b class="mt-2">Bloomberg:</b> JKL1201B<br>
+                                                <b class="mt-2">WKN:</b> 486671
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-4 ml-4">
+                                            <button class="btn button-new mb-2" style="min-width: 182.5px;">Download Factsheet</button>
+                                            <button class="btn button-new mb-3" data-toggle="modal" data-target="#myModal2" style="min-width: 182.5px;">Invest</button>
+                                            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                              <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h4 class="modal-title" id="myModalLabel">Transfer Set-up</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <div class="modal-split">
+                                                        <h5>Thanks for choosing to invest with Calvert Equity Fund USA.<br>
+                                                            To get started with your sustainable investments
+                                                            we will need a few details from the account you wish to make payments from.
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Calvert Equity Fund USA</h5><br>
+                                                                    <b>Fund Info:</b> The fund invests in quality companies
+                                                                    with a demonstrated history of earnings growth, strong
+                                                                    cash flow and high returns on capital<br><br>
+                                                                    <b>ISIN:</b> 1458504576<br><br>
+                                                                    <b>MSCI Rating:</b> AA
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Provide Payment Information</h5><br>
+                                                                    <form id="investmentForm" action="{% url 'polls:addInvestment' %}" method="post">
+                                                                      {% csrf_token %}
+                                                                      <div class="form-group">
+                                                                        <label for="organization">Organization Name:</label>
+                                                                        {{ form.organization }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="authorizer">Authorizer Name:</label>
+                                                                        {{ form.authorizer }}
+                                                                      </div>
+                                                                       <div class="form-group">
+                                                                        <label for="bank">Bank Name:</label>
+                                                                        {{ form.bank_name }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="account">Account Number:</label>
+                                                                        {{ form.account_number }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="amount">Pledged Amount</label>
+                                                                        {{ form.amount }}
+                                                                      </div>
+                                                                    </form>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <h5></h5>
+                                                                <p>
+                                                                    For the purpose of secure transfer you have been assigned a Vitual Account/IBAN.
+                                                                </p><br>
+                                                                <p>
+                                                                    Please use these details to deposit your investment amount from your account
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h5>Please send your funds to your virtual account IBAN</h5><br>
+                                                                    <form>
+                                                                      <div class="form-group">
+                                                                          <label for="bank">Bank Name</label>
+                                                                          <input type="text" class="form-control" id="bank" placeholder="BNP Paribas Berlin" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="iban">IBAN</label>
+                                                                          <input type="text" class="form-control" id="iban" placeholder="BE25 1024 0000 2100 8578 74155" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="bic">BIC</label>
+                                                                          <input type="text" class="form-control" id="bic" placeholder="BEGU98TXXX" readonly>
+                                                                      </div>
+                                                                    </form>
+                                                                <p>
+                                                                    Once the funds have been transferred you will recieve an approval on your account
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <div class="card card-body" style="min-width: 166.83px;">
+                                                <b style="color: #00c9c6; text-align: center; font-size: large;">YIELD: 3.8%</b>
+                                            </div><br>
+                                            <div class="card card-body" style="min-width: 166.83px;">
+                                                <img type="image" src="{% static 'images/msci-rating.png'%}" alt="IMG">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 mb-4 ml-3">
+                                            <div class="card card-body">
+                                                <h5 class="mb-4">
+                                                    Impact
+                                                </h5>
+                                                <b>Energy:</b> Your company has helped in 2 green energy projects
+                                                <br>
+                                                <b>Health:</b> An amount of € 89532 was invested in the health sector
+                                                <br>
+                                                <b>Bio-diversity:</b> 179 trees have been planted through your pools investment
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-7 mb-4 ml-0">
+                                            <div class="card">
+                                              <div class="card-body">
+                                               <canvas id="pool-fund-2" width="600" height="450"></canvas>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5.1 mb-4 ml-0">
+                                          <div class="card">
+                                          <div class="card-body">
+                                             <h5 class="mb-0">
+                                               Performance Data
+                                             </h5>
+                                            <table class="table table-striped">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">Fees</th>
+                                                  <th scope="col"> </th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="row">Max. initial charge in %</th>
+                                                  <td style="color: #00c95a;">3.10%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Service/Management fee p.a. in %</th>
+                                                  <td style="color: #00c95a;">1.10%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Portfolio Characteristics</th>
+                                                  <td> </td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Volatility</th>
+                                                  <td style="color: #00c95a;">12.33%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Sharp Ratio</th>
+                                                  <td style="color: #e71c1c;">-1.00</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Beta</th>
+                                                  <td style="color: #e71c1c;">-1.00</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" id="cardDiv13" style="display: none">
+                                    <div class="row">
+                                        <div class="col-md-3.5 mb-4 ml-4">
+                                            <div class="card card-body">
+                                                <h5 class="mb-3">
+                                                    Account Details
+                                                </h5>
+                                                <b class="mt-2">Name:</b> Lux-konto equity fund AA&nbsp;&nbsp;<br>
+                                                <b class="mt-2">ISIN:</b> 2357444445<br>
+                                                <b class="mt-2">Bloomberg:</b> ABC1236P<br>
+                                                <b class="mt-2">WKN:</b> 345870
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-4 ml-4">
+                                            <button class="btn button-new mb-2" style="min-width: 182.5px;">Download Factsheet</button>
+                                            <button class="btn button-new mb-3" data-toggle="modal" data-target="#myModal3" style="min-width: 182.5px;">Invest</button>
+                                            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                              <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h4 class="modal-title" id="myModalLabel">Transfer Set-up</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <div class="modal-split">
+                                                        <h5>Thanks for choosing to invest with Lux-konto equity fund AA.<br>
+                                                            To get started with your sustainable investments
+                                                            we will need a few details from the account you wish to make payments from.
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Lux-konto equity fund AA</h5><br>
+                                                                    <b>Fund Info:</b> The fund invests worldwide in companies
+                                                                    undergoing profitable growth in the long term thanks
+                                                                    to their sustainable products or services<br><br>
+                                                                    <b>ISIN:</b> 2357444445<br><br>
+                                                                    <b>MSCI Rating:</b> AA
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Provide Payment Information</h5><br>
+                                                                    <form id="investmentForm" action="{% url 'polls:addInvestment' %}" method="post">
+                                                                      {% csrf_token %}
+                                                                      <div class="form-group">
+                                                                        <label for="organization">Organization Name:</label>
+                                                                        {{ form.organization }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="authorizer">Authorizer Name:</label>
+                                                                        {{ form.authorizer }}
+                                                                      </div>
+                                                                       <div class="form-group">
+                                                                        <label for="bank">Bank Name:</label>
+                                                                        {{ form.bank_name }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="account">Account Number:</label>
+                                                                        {{ form.account_number }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="amount">Pledged Amount</label>
+                                                                        {{ form.amount }}
+                                                                      </div>
+                                                                    </form>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <h5></h5>
+                                                                <p>
+                                                                    For the purpose of secure transfer you have been assigned a Vitual Account/IBAN.
+                                                                </p><br>
+                                                                <p>
+                                                                    Please use these details to deposit your investment amount from your account
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h5>Please send your funds to your virtual account IBAN</h5><br>
+                                                                    <form>
+                                                                      <div class="form-group">
+                                                                          <label for="bank">Bank Name</label>
+                                                                          <input type="text" class="form-control" id="bank" placeholder="BNP Paribas Berlin" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="iban">IBAN</label>
+                                                                          <input type="text" class="form-control" id="iban" placeholder="BE25 1024 0000 2100 8578 74155" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="bic">BIC</label>
+                                                                          <input type="text" class="form-control" id="bic" placeholder="BEGU98TXXX" readonly>
+                                                                      </div>
+                                                                    </form>
+                                                                <p>
+                                                                    Once the funds have been transferred you will recieve an approval on your account
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <div class="card card-body" style="min-width: 166.83px;">
+                                                <b style="color: #00c9c6; text-align: center; font-size: large;">YIELD: 3.3%</b>
+                                            </div><br>
+                                            <div class="card card-body" style="min-width: 166.83px;">
+                                                <img type="image" src="{% static 'images/msci-rating.png'%}" alt="IMG">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 mb-4 ml-3">
+                                            <div class="card card-body">
+                                                <h5 class="mb-4">
+                                                    Impact
+                                                </h5>
+                                                <b>Energy:</b> Your company has helped in 4 green energy projects
+                                                <br>
+                                                <b>Health:</b> An amount of € 217,557.00 was invested in the health sector
+                                                <br>
+                                                <b>Bio-diversity:</b> 1092 trees have been planted through your pools investment
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-7 mb-4 ml-0">
+                                            <div class="card">
+                                              <div class="card-body">
+                                               <canvas id="pool-fund-3" width="600" height="450"></canvas>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5.1 mb-4 ml-0">
+                                            <div class="card">
+                                          <div class="card-body">
+                                              <h5 class="mb-0">
+                                               Performance Data
+                                            </h5>
+                                            <table class="table table-striped">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">Fees</th>
+                                                  <th scope="col"> </th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="row">Max. initial charge in %</th>
+                                                  <td style="color: #00c95a;">3.20%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Service/Management fee p.a. in %</th>
+                                                  <td style="color: #00c95a;">1.20%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Portfolio Characteristics</th>
+                                                  <td> </td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Volatility</th>
+                                                  <td style="color: #00c95a;">15.08%</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Sharp Ratio</th>
+                                                  <td style="color: #e71c1c;">-1.05</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Beta</th>
+                                                  <td style="color: #e71c1c;">-1.05</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="row">
+                                  <div class="col-md-3 mb-4 ml-4">
+                                    <p>
+                                      <button class="btn button-new" onclick="showFunds1()">Closed-End Fund 1</button><br><br>
+                                      <button class="btn button-new" onclick="showFunds2()">Closed-End Fund 2</button><br><br>
+                                      <button class="btn button-new" onclick="showFunds3()">Closed-End Fund 3</button><br><br>
+                                    </p>
+                                  </div>
+                                    <div class="col-md-8 mb-4 ml-4" id="cardDiv01">
+                                        <div class="card card-body">
+                                            <b>Blackrock World Healthscience</b><br>
+                                            The World Healthscience Fund seeks to maximise total return. The Fund invests
+                                            globally at least 70% of its total assets in the equity securities of companies
+                                            whose predominant economic activity is in healthcare, pharmaceuticals, medical
+                                            technology and supplies and the development of biotechnology. Currency exposure
+                                            is flexibly managed.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 mb-4 ml-4" id="cardDiv02" style="display: none">
+                                        <div class="card card-body">
+                                            <b>Virtus AllianzGI </b><br>
+                                            Virtus AllianzGI Artificial Intelligence & Technology Opportunities Fund seeks
+                                            total return through a combination of current income, current gains and long-term
+                                            capital appreciation by investing in companies across a broad range of industries
+                                            and technologies positioned to benefit from the evolution and disruptive power
+                                            of artificial intelligence and other new technologies
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 mb-4 ml-4" id="cardDiv03" style="display: none">
+                                        <div class="card card-body">
+                                            <b>Triodos Renewables Europe</b><br>
+                                            Triodos Renewables Europe Fund aims to further develop the renewable energy
+                                            sector by investing in European power producing assets to increase the share
+                                            of clean energy of the total energy demand and to reduce CO2 emissions. The
+                                            fund offers complimentary risk capital through equity or subordinated loans
+                                            by plugging a funding gap to support small and medium sized developers of
+                                            renewable energy. Triodos Renewables Europe Fund provides access to a well
+                                            diversified portfolio of direct private equity infrastructure investments in
+                                            renewable energy power plants, allowing investors to participate in the green
+                                            transition of the energy sector.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" id="cardDiv21">
+                                    <div class="row">
+                                        <div class="col-md-3.5 mb-4 ml-4">
+                                            <div class="card card-body">
+                                                <h5 class="mb-3">
+                                                    Account Details
+                                                </h5>
+                                                <b class="mt-2">Name:</b>BlackRock World Healthscience Fund<br>
+                                                <b class="mt-2">ISIN:</b>LU0122379950<br>
+                                                <b class="mt-2">Bloomberg:</b>MEALU LX<br>
+                                                <b class="mt-2">WKN:</b>348527<br>
+                                                <b class="mt-2">Fund Type:</b>UCITS
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-4 ml-3">
+                                            <button class="btn button-new mb-2" style="min-width: 182.5px;">Download Factsheet</button>
+                                            <button class="btn button-new mb-3" data-toggle="modal" data-target="#myModal01" style="min-width: 182.5px;">Invest</button>
+                                            <div class="modal fade" id="myModal01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                              <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h4 class="modal-title" id="myModalLabel">Transfer Set-up</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <div class="modal-split">
+                                                        <h5>Thanks for choosing to invest with BlackRock World Healthscience Fund.<br>
+                                                            To get started with your sustainable investments
+                                                            we will need a few details from the account you wish to make payments from.
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>BlackRock World Healthscience Fund</h5><br>
+                                                                    <b>Fund Info:</b> The fund invests globally at least
+                                                                    70% of its total assets in the equity securities of
+                                                                    companies whose predominant economic activity is in
+                                                                    healthcare, pharmaceuticals, medical technology and
+                                                                    supplies and the development of biotechnology.<br><br>
+                                                                    <b>ISIN:</b> LU0122379950<br><br>
+                                                                    <b>MSCI Rating:</b> AA
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Provide Payment Information</h5><br>
+                                                                    <form id="investmentForm" action="{% url 'polls:addInvestment' %}" method="post">
+                                                                      {% csrf_token %}
+                                                                      <div class="form-group">
+                                                                        <label for="organization">Organization Name:</label>
+                                                                        {{ form.organization }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="authorizer">Authorizer Name:</label>
+                                                                        {{ form.authorizer }}
+                                                                      </div>
+                                                                       <div class="form-group">
+                                                                        <label for="bank">Bank Name:</label>
+                                                                        {{ form.bank_name }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="account">Account Number:</label>
+                                                                        {{ form.account_number }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="amount">Pledged Amount</label>
+                                                                        {{ form.amount }}
+                                                                      </div>
+                                                                    </form>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <h5></h5>
+                                                                <p>
+                                                                    For the purpose of secure transfer you have been assigned a Vitual Account/IBAN.
+                                                                </p><br>
+                                                                <p>
+                                                                    Please use these details to deposit your investment amount from your account
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h5>Please send your funds to your virtual account IBAN</h5><br>
+                                                                    <form>
+                                                                      <div class="form-group">
+                                                                          <label for="bank">Bank Name</label>
+                                                                          <input type="text" class="form-control" id="bank" placeholder="BNP Paribas Berlin" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="iban">IBAN</label>
+                                                                          <input type="text" class="form-control" id="iban" placeholder="BE25 1024 0000 2100 8578 74155" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="bic">BIC</label>
+                                                                          <input type="text" class="form-control" id="bic" placeholder="BEGU98TXXX" readonly>
+                                                                      </div>
+                                                                    </form>
+                                                                <p>
+                                                                    Once the funds have been transferred you will recieve an approval on your account
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <div class="card card-body mb-5" style="min-width: 166.83px;">
+                                                <b style="color: #00c9c6; text-align: center; font-size: large;">YIELD: 6.8%</b>
+                                            </div>
+                                            <div class="card card-body" style="min-width: 166.83px;">
+                                                <img type="image" src="{% static 'images/msci-rating.png'%}" alt="IMG">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4 ml-3">
+                                            <div class="card card-body mb-4">
+                                                <h5 class="mb-4">
+                                                    Impact
+                                                </h5>
+                                                <b>Health:</b>
+                                                This fund has helped in development of m-RNA Covid-19 vaccines during the
+                                                year 2020/21. 70% of its investment has gone into health science research
+                                                and development
+                                            </div>
+                                            <div class="card card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <small style="font-size: x-small">NAV Jul-2021</small>
+                                                        <p style="color: #00c9c6;">USD 64.72</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <small style="font-size: x-small">1 Day NAV Change</small>
+                                                        <p><i class="fa fa-arrow-up" style="color: #00c9c6;"></i>0.40 (0.62%)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-7 mb-4 ml-0">
+                                            <div class="card">
+                                              <div class="card-body">
+                                               <canvas id="closed-fund-1" width="600" height="450"></canvas>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5.1 mb-4 ml-0">
+                                            <div class="card">
+                                          <div class="card-body">
+                                              <h5 class="mb-0">
+                                               Portfolio Characteristics
+                                            </h5>
+                                            <table class="table table-striped">
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="col" style="color: #545252">P/E Ratio</th>
+                                                  <th scope="col">29.64</th>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">3Y Volatility</th>
+                                                  <td style="color: #00c95a;">14.93</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Since Class Inception-Volatility</th>
+                                                  <td style="color: #00c95a;">14.52</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row" style="color: #545252">Avg Market Cap (USD Millions)</th>
+                                                  <td>136,450.7</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">5Y Volatility</th>
+                                                  <td style="color: #00c95a;">13.41</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Since Class Inception-Beta</th>
+                                                  <td style="color: #e71c1c;">0.95</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Fee Charge</th>
+                                                  <td style="color: #e71c1c;">5.00%</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" id="cardDiv22" style="display: none">
+                                    <div class="row">
+                                        <div class="col-md-3.5 mb-4 ml-4">
+                                            <div class="card card-body">
+                                                <h5 class="mb-3">
+                                                    Account Details
+                                                </h5>
+                                                <b class="mt-2">Name:</b>Virtus AllianzGI AI & Tech Fund<br>
+                                                <b class="mt-2">ISIN:</b>US3852373120<br>
+                                                <b class="mt-2">Bloomberg:</b>FXXUS AU<br>
+                                                <b class="mt-2">WKN:</b>412785<br>
+                                                <b class="mt-2">Fund Type:</b>TUZXI
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-4 ml-3">
+                                            <button class="btn button-new mb-2" style="min-width: 182.5px;">Download Factsheet</button>
+                                            <button class="btn button-new mb-3" data-toggle="modal" data-target="#myModal02" style="min-width: 182.5px;">Invest</button>
+                                            <div class="modal fade" id="myModal02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                              <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h4 class="modal-title" id="myModalLabel">Transfer Set-up</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <div class="modal-split">
+                                                        <h5>Thanks for choosing to invest with Virtus AllianzGI AI & Tech Fund.<br>
+                                                            To get started with your sustainable investments
+                                                            we will need a few details from the account you wish to make payments from.
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Virtus AllianzGI AI & Tech Fund</h5><br>
+                                                                    <b>Fund Info:</b> The fund invests in a growing universe
+                                                                    of opportunities across a broad spectrum of technologies
+                                                                    and sectors embracing the disruptive power of artificial
+                                                                    intelligence and other new technologies<br><br>
+                                                                    <b>ISIN:</b> US3852373120<br><br>
+                                                                    <b>MSCI Rating:</b> AA
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Provide Payment Information</h5><br>
+                                                                    <form id="investmentForm" action="{% url 'polls:addInvestment' %}" method="post">
+                                                                      {% csrf_token %}
+                                                                      <div class="form-group">
+                                                                        <label for="organization">Organization Name:</label>
+                                                                        {{ form.organization }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="authorizer">Authorizer Name:</label>
+                                                                        {{ form.authorizer }}
+                                                                      </div>
+                                                                       <div class="form-group">
+                                                                        <label for="bank">Bank Name:</label>
+                                                                        {{ form.bank_name }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="account">Account Number:</label>
+                                                                        {{ form.account_number }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="amount">Pledged Amount</label>
+                                                                        {{ form.amount }}
+                                                                      </div>
+                                                                    </form>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <h5></h5>
+                                                                <p>
+                                                                    For the purpose of secure transfer you have been assigned a Vitual Account/IBAN.
+                                                                </p><br>
+                                                                <p>
+                                                                    Please use these details to deposit your investment amount from your account
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h5>Please send your funds to your virtual account IBAN</h5><br>
+                                                                    <form>
+                                                                      <div class="form-group">
+                                                                          <label for="bank">Bank Name</label>
+                                                                          <input type="text" class="form-control" id="bank" placeholder="BNP Paribas Berlin" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="iban">IBAN</label>
+                                                                          <input type="text" class="form-control" id="iban" placeholder="BE25 1024 0000 2100 8578 74155" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="bic">BIC</label>
+                                                                          <input type="text" class="form-control" id="bic" placeholder="BEGU98TXXX" readonly>
+                                                                      </div>
+                                                                    </form>
+                                                                <p>
+                                                                    Once the funds have been transferred you will recieve an approval on your account
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <div class="card card-body mb-5" style="min-width: 166.83px;">
+                                                <b style="color: #00c9c6; text-align: center; font-size: large;">YIELD: 7.2%</b>
+                                            </div>
+                                            <div class="card card-body" style="min-width: 166.83px;">
+                                                <img type="image" src="{% static 'images/msci-rating.png'%}" alt="IMG">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 mb-4 ml-3">
+                                            <div class="card card-body mb-4">
+                                                <h5 class="mb-4">
+                                                    Impact
+                                                </h5>
+                                                <b>Innovation:</b>
+                                                The Fund invests in a growing universe of opportunities across a broad
+                                                spectrum of technologies and sectors embracing the disruptive power of
+                                                artificial intelligence and other new technologies
+                                            </div><br>
+                                            <div class="card card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <small style="font-size: x-small">NAV Jul-2021</small>
+                                                        <p style="color: #00c9c6;">USD 27.82</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <small style="font-size: x-small">1 Day NAV Change</small>
+                                                        <p><i class="fa fa-arrow-up" style="color: #00c9c6;"></i>0.21 (0.40%)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-7 mb-4 ml-0">
+                                            <div class="card">
+                                              <div class="card-body">
+                                               <canvas id="closed-fund-2" width="600" height="450"></canvas>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5.1 mb-4 ml-0">
+                                            <div class="card">
+                                          <div class="card-body">
+                                              <h5 class="mb-0">
+                                               Portfolio Characteristics
+                                            </h5>
+                                            <table class="table table-striped">
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="col" style="color: #545252">P/E Ratio</th>
+                                                  <th scope="col">18.76</th>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">3Y Volatility</th>
+                                                  <td style="color: #00c95a;">8.64</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Since Class Inception-Volatility</th>
+                                                  <td style="color: #00c95a;">18.21</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row" style="color: #545252">Avg Market Cap (USD Millions)</th>
+                                                  <td>1,040.3</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">5Y Volatility</th>
+                                                  <td style="color: #00c95a;">15.57</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Since Class Inception-Beta</th>
+                                                  <td style="color: #e71c1c;">0.87</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Fee Charge</th>
+                                                  <td style="color: #e71c1c;">3.00%</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" id="cardDiv23" style="display: none">
+                                    <div class="row">
+                                        <div class="col-md-3.5 mb-4 ml-3">
+                                            <div class="card card-body">
+                                                <h5 class="mb-3">
+                                                    Account Details
+                                                </h5>
+                                                <b class="mt-2">Name:</b>Triodos Renewables Europe Fund<br>
+                                                <b class="mt-2">ISIN:</b>NL0013908692<br>
+                                                <b class="mt-2">Bloomberg:</b>QTUP EU<br>
+                                                <b class="mt-2">WKN:</b>736952<br>
+                                                <b class="mt-2">Fund Type:</b>SICAV
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-4 ml-3">
+                                            <button class="btn button-new mb-2" style="min-width: 182.5px;">Download Factsheet</button>
+                                            <button class="btn button-new mb-3" data-toggle="modal" data-target="#myModal03" style="min-width: 182.5px;">Invest</button>
+                                            <div class="modal fade" id="myModal03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                              <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h4 class="modal-title" id="myModalLabel">Transfer Set-up</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <div class="modal-split">
+                                                        <h5>Thanks for choosing to invest with Triodos Renewables Europe Fund.<br>
+                                                            To get started with your sustainable investments
+                                                            we will need a few details from the account you wish to make payments from.
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Triodos Renewables Europe Fund</h5><br>
+                                                                    <b>Fund Info:</b> The fund aims to further develop
+                                                                    the renewable energy sector by investing in European
+                                                                    power producing assets to increase the share of clean
+                                                                    energy.<br><br>
+                                                                    <b>ISIN:</b> NL0013908692<br><br>
+                                                                    <b>MSCI Rating:</b> AA
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    <h5>Provide Payment Information</h5><br>
+                                                                    <form id="investmentForm" action="{% url 'polls:addInvestment' %}" method="post">
+                                                                      {% csrf_token %}
+                                                                      <div class="form-group">
+                                                                        <label for="organization">Organization Name:</label>
+                                                                        {{ form.organization }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="authorizer">Authorizer Name:</label>
+                                                                        {{ form.authorizer }}
+                                                                      </div>
+                                                                       <div class="form-group">
+                                                                        <label for="bank">Bank Name:</label>
+                                                                        {{ form.bank_name }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="account">Account Number:</label>
+                                                                        {{ form.account_number }}
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                        <label for="amount">Pledged Amount</label>
+                                                                        {{ form.amount }}
+                                                                      </div>
+                                                                    </form>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-split">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <h5></h5>
+                                                                <p>
+                                                                    For the purpose of secure transfer you have been assigned a Vitual Account/IBAN.
+                                                                </p><br>
+                                                                <p>
+                                                                    Please use these details to deposit your investment amount from your account
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h5>Please send your funds to your virtual account IBAN</h5><br>
+                                                                    <form>
+                                                                      <div class="form-group">
+                                                                          <label for="bank">Bank Name</label>
+                                                                          <input type="text" class="form-control" id="bank" placeholder="BNP Paribas Berlin" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="iban">IBAN</label>
+                                                                          <input type="text" class="form-control" id="iban" placeholder="BE25 1024 0000 2100 8578 74155" readonly>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                          <label for="bic">BIC</label>
+                                                                          <input type="text" class="form-control" id="bic" placeholder="BEGU98TXXX" readonly>
+                                                                      </div>
+                                                                    </form>
+                                                                <p>
+                                                                    Once the funds have been transferred you will recieve an approval on your account
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <div class="card card-body mb-5" style="min-width: 166.83px;">
+                                                <b style="color: #00c9c6; text-align: center; font-size: large;">YIELD: 6.8%</b>
+                                            </div>
+                                            <div class="card card-body" style="min-width: 166.83px;">
+                                                <img type="image" src="{% static 'images/msci-rating.png'%}" alt="IMG">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4 ml-3">
+                                            <div class="card card-body mb-4">
+                                                <h5 class="mb-4">
+                                                    Impact
+                                                </h5>
+                                                <b>Energy:</b>
+                                                This fund has invested more than 120 million in development of renewable
+                                                energy projects such as 7 wind-energy projects
+                                                in southern Germany in past five years.
+                                            </div>
+                                            <div class="card card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <small style="font-size: x-small">NAV Jul-2021</small>
+                                                        <p style="color: #00c9c6;">EUR 32.52</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <small style="font-size: x-small">1 Day NAV Change</small>
+                                                        <p><i class="fa fa-arrow-up" style="color: #00c9c6;"></i>0.28 (0.30%)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-7 mb-4 ml-0">
+                                            <div class="card">
+                                              <div class="card-body">
+                                               <canvas id="closed-fund-3" width="600" height="450"></canvas>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5.1 mb-4 ml-0">
+                                            <div class="card">
+                                          <div class="card-body">
+                                              <h5 class="mb-0">
+                                               Portfolio Characteristics
+                                            </h5>
+                                            <table class="table table-striped">
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="col" style="color: #545252">P/E Ratio</th>
+                                                  <th scope="col">17.65</th>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">3Y Volatility</th>
+                                                  <td style="color: #00c95a;">26.40</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Since Class Inception-Volatility</th>
+                                                  <td style="color: #00c95a;">26.80</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row" style="color: #545252">Avg Market Cap (USD Millions)</th>
+                                                  <td>1257.8</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">5Y Volatility</th>
+                                                  <td style="color: #00c95a;">35.55</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Since Class Inception-Beta</th>
+                                                  <td style="color: #e71c1c;">1.17</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Fee Charge</th>
+                                                  <td style="color: #e71c1c;">3.00%</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                                <h5 class="mb-3">Green Bonds Listings</h5>
+                                <table class="table table-hover text-nowrap">
+                                          <thead>
+                                            <tr>
+                                              <th scope="col"></th>
+                                              <th scope="col">Entity</th>
+                                              <th scope="col">Amount Issued</th>
+                                              <th scope="col">Maturity Date</th>
+                                              <th scope="col">7 Day %</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                              <th scope="row">
+                                                  <button class="btn button-new mb-2">Select</button>
+                                              </th>
+                                              <td>
+                                                  <b class="mb-1" style="color: #474646;">KD Bank LTD</b><br>
+                                                  <small class="mb-1">1033549820</small><br>
+                                                  <small>04/05/2021</small>
+                                              </td>
+                                              <td>
+                                                  <b class="mb-1" style="color: #474646;">2000000</b><br>
+                                                  <small class="mb-1">KRW</small>
+                                              </td>
+                                              <td>
+                                                  <b class="mb-1" style="color: #474646;">15/04/2024</b>
+                                              </td>
+                                              <td>
+                                                  <span class="text-success">
+                                                      <i class="fa fa-caret-up me-1"></i><span>99.521%</span>
+                                                  </span>
+                                              </td>
+                                            </tr>
+                                              <tr>
+                                                  <th scope="row">
+                                                      <button class="btn button-new mb-2">Select</button>
+                                                  </th>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">ATR Eur RealEst LTD</b><br>
+                                                      <small class="mb-1">1033566710</small><br>
+                                                      <small>01/05/2021</small>
+                                                  </td>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">300000</b><br>
+                                                      <small class="mb-1">EUR</small>
+                                                  </td>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">21/08/2026</b>
+                                                  </td>
+                                                  <td>
+                                                      <span class="text-success">
+                                                          <i class="fa fa-caret-up me-1"></i><span>98.630%</span>
+                                                      </span>
+                                                  </td>
+                                                </tr>
+                                              <tr>
+                                                  <th scope="row">
+                                                      <button class="btn button-new mb-2">Select</button>
+                                                  </th>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">Kyushu Railway</b><br>
+                                                      <small class="mb-1">1033875110</small><br>
+                                                      <small>09/10/2020</small>
+                                                  </td>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">10000000</b><br>
+                                                      <small class="mb-1">JPY</small>
+                                                  </td>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">15/10/2026</b>
+                                                  </td>
+                                                  <td>
+                                                      <span class="text-danger">
+                                                          <i class="fa fa-caret-down me-1"></i><span>96.990%</span>
+                                                      </span>
+                                                  </td>
+                                                </tr>
+                                              <tr>
+                                                  <th scope="row">
+                                                      <button class="btn button-new mb-2">Select</button>
+                                                  </th>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">NTT UD REIT</b><br>
+                                                      <small class="mb-1">1011845792</small><br>
+                                                      <small>21/06/2021</small>
+                                                  </td>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">2080000</b><br>
+                                                      <small class="mb-1">JPY</small>
+                                                  </td>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">20/06/2025</b>
+                                                  </td>
+                                                  <td>
+                                                      <span class="text-danger">
+                                                          <i class="fa fa-caret-down me-1"></i><span>98.024%</span>
+                                                      </span>
+                                                  </td>
+                                                </tr>
+                                              <tr>
+                                                  <th scope="row">
+                                                      <button class="btn button-new mb-2">Select</button>
+                                                  </th>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">Stockholms Landsting</b><br>
+                                                      <small class="mb-1">1055388030</small><br>
+                                                      <small>11/05/2021</small>
+                                                  </td>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">320000</b><br>
+                                                      <small class="mb-1">SEK</small>
+                                                  </td>
+                                                  <td>
+                                                      <b class="mb-1" style="color: #474646;">10/05/2025</b>
+                                                  </td>
+                                                  <td>
+                                                      <span class="text-success">
+                                                          <i class="fa fa-caret-up me-1"></i><span>99.660%</span>
+                                                      </span>
+                                                  </td>
+                                                </tr>
+                                          </tbody>
+                                        </table>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+        </div>
+        </div>
+    </div>
+{% endblock %}

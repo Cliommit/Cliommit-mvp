@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} strategies {% endblock %}
+{% block content %}
+<div class="container" style="min-width: 1200px;">
+    <div class="main-body">
+          <!-- Breadcrumb -->
+            <nav class="navbar navbar-light bg-white sticky-top">
+                <a class="navbar-brand" href="https://www.cliommit.com/">
+                  <img src="{% static 'images/cliommit_logo_green.svg'%}" height="30" loading="lazy"/>
+                </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Edit Profile &emsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Settings &emsp;&emsp;<i class="fa fa-gear" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Help &emsp;&emsp;&emsp;&emsp;<i class="fa fa-question" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Log-out &emsp;&emsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+{#                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
+{#                    <span class="navbar-toggler-icon"></span>#}
+{#                  </button>#}
+{#                  <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#                    <ul class="navbar-nav ml-auto text-right">#}
+{#                      <li class="nav-item">#}
+{#                        <a class="nav-link" href="#">#}
+{#                            Edit Profile &emsp;<i class="fa fa-user" aria-hidden="true"></i>#}
+{#                        </a>#}
+{#                      </li>#}
+{#                      <li class="nav-item">#}
+{#                        <a class="nav-link" href="#">#}
+{#                            Settings &emsp;<i class="fa fa-gear" aria-hidden="true"></i>#}
+{#                        </a>#}
+{#                      </li>#}
+{#                      <li class="nav-item">#}
+{#                        <a class="nav-link" href="#">#}
+{#                            Help &emsp;<i class="fa fa-question" aria-hidden="true"></i>#}
+{#                        </a>#}
+{#                      </li>#}
+{#                      <li class="nav-item">#}
+{#                        <a class="nav-link" href="#">#}
+{#                            Log-out &emsp;<i class="fa fa-sign-out" aria-hidden="true"></i>#}
+{#                        </a>#}
+{#                      </li>#}
+{#                    </ul>#}
+{#                  </div>#}
+            </nav>
+            <br>
+          <!-- /Breadcrumb -->
+        <div class="row gutters-sm">
+         <div class="col-md-3 mb-0">
+             <div class="sticky-top" style="top:70px;">
+                <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center text-center">
+                          <div>
+                              <img type="image" src="{% static 'images/share-now.png'%}" alt="IMG" style="max-width: 250px;">
+                          </div>
+                          <div class="mt-3">
+                          <h4>SHARE NOW GmbH</h4>
+                          <p class="text-secondary mb-1">E-mobility</p>
+                          <p class="text-muted font-size-sm">Berlin, Germany</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                 <br>
+                <div class="row">
+                  <div class="col-12">
+                      <div class="card" style="background-color: #f8f9fa;">
+                          <div class="card-body">
+                            <div role="group" aria-label="Vertical button group" style="width: 100%;">
+                              <!--suppress CssInvalidPropertyValue -->
+                              <a href="{% url 'polls:home' id=1%}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Profile</b>
+                              </a>
+                              <a href="{% url 'polls:investments' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Investment Pool</b>
+                              </a>
+                              <a href="{% url 'polls:investments_private' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Investment Portfolios</b>
+                              </a>
+                              <a href="{% url 'polls:statistics' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Analytics</b>
+                              </a>
+                              <a href="" class="btn button-new" style="min-width:-webkit-fill-available">
+                                  <b>Strategies</b>
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                 <br>
+                <div class="row">
+                  <div class="col-12">
+                      <div class="card">
+                          <div class="card-body">
+                            <h4 class="mb-2">Media Section</h4>
+                              <div style="height: 150px; overflow-y: scroll;">
+                               <ul>
+                                  <li>
+                                      <img src="https://static.independent.co.uk/2021/04/21/11/newFile-2.jpg?width=640&auto=webp&quality=75" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="http://www.blackstarnews.com/sites/default/files/styles/news-detail-page/public/field/image/Screenshot%202021-06-17%20at%2010-34-53%20Climate-Related%20Migration%20youtube%20-%20Google%20Search.png?itok=HCDmQT88" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="https://onlinepublichealth.gwu.edu/wp-content/uploads/sites/47/2021/03/54-Sources-for-Climate-Change-News-hero.jpeg?w=1024" style="width: 230px;">
+                                  </li>
+                               </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

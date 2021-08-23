@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>redirecting</title>
+    <meta http-equiv="Refresh" content="6;{% url 'polls:investments' %}">
+    <style>
+
+    /*CUSTOM PRELOADER*/
+    .loader-bg{
+      position: fixed;
+      z-index: 999999;
+      background: #fff;
+      width: 100%;
+      height: 100%;
+    }
+    .loader-p{
+      border: 0 solid transparent;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: calc(50vh - 75px);
+      left: calc(50vw - 75px);
+    }
+
+    .loader-p:before, .loader-p:after{
+      content: '';
+      border: 1em solid #00c9c6;
+      border-radius: 50%;
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: loader 2s linear infinite;
+      opacity: 0;
+    }
+
+    .loader-p:before{
+      animation-delay: 0.5s;
+    }
+
+    @keyframes loader{
+      0%{
+        transform: scale(0);
+        opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      100%{
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+    /*end of custom preloader*/
+#loading {
+    animation: loaderAnimation 0s 4s forwards;
+    visibility: visible;
+}
+@keyframes loaderAnimation {
+    to {visibility: hidden}
+}
+
+#checkmark{
+    animation: cssAnimation 0s 4s forwards;
+    visibility: hidden;
+}
+@keyframes cssAnimation {
+    to {visibility: visible}
+}
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+</head>
+<body>
+    <div class="loader-bg">
+        <div class="loader-p" id="loading">
+            <h5>Your funds are being transferred</h5>
+        </div>
+        <div id="checkmark">
+            <div style="position: absolute; top: calc(50vh - 5px); left: calc(50vw - 5px);">
+                <i class="fa fa-check-circle" style="font-size: xxx-large; color: #00c9c6;"></i>
+            </div>
+            <div style="position: absolute; top: calc(60vh - 5px); left: calc(40vw - 5px);">
+                <h5>Your funds have been transferred</h5>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

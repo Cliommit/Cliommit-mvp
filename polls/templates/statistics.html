@@ -1,0 +1,726 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} stats {% endblock %}
+{% block content %}
+<script>
+$(document).ready(function (){
+    var ctx = document.getElementById('carbon-line').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2018','','', '2019', '', '', '2020', '', '', '2021'],
+            datasets: [{
+                label: 'Leader',
+                data: ['180000', '182000', '185000','184000', '185500', '187000', '188000','190000','189000','191000'],
+                borderColor: '#f7931e',
+                fill: false
+            },
+            {
+                label: 'Cliommit',
+                data: ['209000', '215000', '221000','219000', '224000', '230500', '232000','232200','234000','240650'],
+                borderDash: [10,5],
+                borderColor: '#00c9c6',
+                fill: false
+            },
+            {
+                label: 'Average',
+                data: ['242000', '245000', '245000','244800', '246000', '250600', '250800','258000','258900','260000'],
+                borderColor: '#474747',
+                fill: false
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: 'GHG emissions (in tons)'
+        },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('environment-line').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2018','','', '2019', '', '', '2020', '', '', '2021'],
+            datasets: [{
+                label: 'Leader',
+                data: ['78', '78', '78','82', '82', '82', '78','85','85','85'],
+                borderColor: '#f7931e',
+                fill: false
+            },
+            {
+                label: 'Cliommit',
+                data: ['50', '50', '50','55', '55', '75', '75','75','73','70'],
+                borderDash: [10,5],
+                borderColor: '#00c9c6',
+                fill: false
+            },
+            {
+                label: 'Average',
+                data: ['50', '50', '50','50', '50', '50', '50','51','51','50'],
+                borderColor: '#474747',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Environment'
+        },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+});
+$(document).ready(function (){
+    var ctx = document.getElementById('social-line').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2018','','', '2019', '', '', '2020', '', '', '2021'],
+            datasets: [{
+                label: 'Leader',
+                data: ['90', '90', '90','80', '80', '80', '85','85','85','90'],
+                borderColor: '#f7931e',
+                fill: false
+            },
+            {
+                label: 'Cliommit',
+                data: ['40', '40', '40','55', '55', '60', '60','60','60','65'],
+                borderDash: [10,5],
+                borderColor: '#00c9c6',
+                fill: false
+            },
+            {
+                label: 'Average',
+                data: ['50', '50', '50','50', '50', '50', '50','50','50','50'],
+                borderColor: '#474747',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Social'
+        },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+});
+$(document).ready(function (){
+    var ctx = document.getElementById('governance-line').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2018','','', '2019', '', '', '2020', '', '', '2021'],
+            datasets: [{
+                label: 'Leader',
+                data: ['83', '83', '84','84', '86', '85', '85','85','78','81'],
+                borderColor: '#f7931e',
+                fill: false
+            },
+            {
+                label: 'Cliommit',
+                data: ['49', '49', '49','50', '50', '50', '51','52','52','54'],
+                borderDash: [10,5],
+                borderColor: '#00c9c6',
+                fill: false
+            },
+            {
+                label: 'Average',
+                data: ['50', '50', '50','50', '50', '50', '50','50','51','51'],
+                borderColor: '#474747',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Governance'
+        },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('carbon-bar').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Cliommit', '#2', '#3', '#4', '#5', '#6', '#7', '#8', '#9', '#10'],
+            datasets: [{
+                label: 'Carbon Emissions',
+                data: [2.3, 4.1, 3.3, 4.6, 5, 2.8, 3.8, 4.3, 5, 3],
+                backgroundColor: '#00c9c6',
+            },
+            {
+                label: 'Carbon Cap Difference',
+                data: [2.7, 0.9, 1.7, 0.4, 0, 2.2, 1.2, 0.7, 0, 2],
+                backgroundColor: '#c0c2db',
+            },
+            {
+                label: 'Carbon Surplus',
+                data: [0, 0, 0, 0, 1.3, 0, 0, 0, 1.8, 0],
+                backgroundColor: '#f7931e',
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'User Pool Ratings'
+        },
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                    gridLines: {
+                        display: false,
+                    }
+                }],
+                yAxes: [{
+                    stacked: true,
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    type: 'linear',
+                }]
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('reduction-bar').getContext('2d');
+    const data = [1.674, 2.690, -2.580, -1.500, 0.460, -0.500, 2.045, 0.321, -3.010];
+    const colours = data.map((value) => value < 0 ? '#f7931e' : '#00c9c6');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Zal','Cli','Lie', 'Abc', 'Fli', 'Blu', 'Tes', 'Cor','Oem'],
+            datasets: [{
+                label: 'Carbon reduced',
+                data: data,
+                backgroundColor: colours,
+            }
+            ]
+        },
+        options: {
+            title: {
+            display: true,
+            text: 'Carbon reduction among peers (in %)'
+        },
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                    gridLines: {
+                        display: false,
+                    }
+                }],
+                yAxes: [{
+                    stacked: true,
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    type: 'linear',
+                }]
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('reduction-donut').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Zal','Cli','Lie', 'Abc', 'Fli', 'Blu', 'Tes', 'Cor','Oem'],
+            datasets: [{
+                label: 't/CO2 reduced',
+                data: [8914.05,1155,3078,1111.2,2735.2,352.9,311.5,1856,3933.6],
+                backgroundColor: ['#00c9c6','#f7931e','#e6f668','#c0c2db', '#ef6767','#ffba52','#7dff5e','#ea4d95','#405cea']
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Total contribution in reduction of GHG (in t/CO2)'
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('esg-dist-bar').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Negligible', 'Low', 'Medium', 'High', 'Severe'],
+            datasets: [{
+                label: 'Global',
+                data: [1, 19, 36, 27, 17],
+                backgroundColor: ['#808080','#808080','#808080','#808080', '#808080']
+            },
+            {
+                label: 'Industry group',
+                data: [0, 70, 29, 0, 0],
+                backgroundColor: ['#00c9c6','#00c9c6','#00c9c6','#00c9c6', '#00c9c6']
+            },
+            {
+                label: 'Sub-industry',
+                data: [0, 21, 78, 2, 0],
+                backgroundColor: ['#008a87','#008a87','#008a87','#008a87', '#008a87']
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: 'ESG Impact Distribution'
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('scopes-radar').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Scope-1 (disclosed)', 'Scope-2 (disclosed)', 'Scope-1 (undefined)', 'Scope-2 (undefined)', 'Scope-3 (upstream)', 'Scope-3 (undefined)'],
+            datasets: [{
+                label: '2019',
+                data: [65, 59, 90, 81, 56, 55, 40],
+                backgroundColor: 'rgb(0,201,198,0.2)',
+                borderColor: 'rgb(0,201,198)'
+            },
+            {
+                label: '2020',
+                data: [28, 48, 40, 19, 96, 27, 96],
+                backgroundColor: 'rgb(247,147,30,0.2)',
+                borderColor: 'rgb(247,147,30)'
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: 'GHG Emissions by scopes (in mT CO2e)'
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('energy-bar').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Electricity', 'District Heating', 'Natural Gas', 'Car Fleet'],
+            datasets: [{
+                axis: 'y',
+                label: 'Company',
+                data: [43000, 19000, 24000, 56000],
+                backgroundColor: ['#2273ba','#2273ba','#2273ba','#2273ba']
+            },
+            {
+                axis: 'y',
+                label: 'Pool average',
+                data: [48000, 24000, 39000, 52000],
+                backgroundColor: ['#696868','#696868','#696868','#696868', '#696868']
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            title: {
+            display: true,
+            text: 'Energy Consumption (in MWh)'
+            }
+        }
+    });
+});
+</script>
+    <div class="container" style="min-width: 1200px;">
+    <div class="main-body">
+        <nav class="navbar navbar-light bg-white sticky-top">
+                <a class="navbar-brand" href="https://www.cliommit.com/">
+                  <img src="{% static 'images/cliommit_logo_green.svg'%}" height="30" loading="lazy"/>
+                </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Edit Profile &emsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Settings &emsp;&emsp;<i class="fa fa-gear" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Help &emsp;&emsp;&emsp;&emsp;<i class="fa fa-question" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Log-out &emsp;&emsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+            </nav>
+        <br>
+        <div class="row gutters-sm">
+            <div class="col-md-3 mb-3">
+             <div class="sticky-top" style="top:70px;">
+                <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center text-center">
+                          <div>
+                              <img type="image" src="{% static 'images/share-now.png'%}" alt="IMG" style="max-width: 250px;">
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-12">
+                      <div class="card" style="background-color: #f8f9fa;">
+                          <div class="card-body">
+                            <div role="group" aria-label="Vertical button group" style="width: 100%;">
+                              <!--suppress CssInvalidPropertyValue -->
+                              <a href="{% url 'polls:home' id=1%}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Profile</b>
+                              </a>
+                              <a href="{% url 'polls:investments' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Investment Pool</b>
+                              </a>
+                              <a href="{% url 'polls:investments_private' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Investment Portfolios</b>
+                              </a>
+                              <a href="" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Analytics</b>
+                              </a>
+                              <a href="{% url 'polls:strategies'%}" class="btn button-new" style="min-width:-webkit-fill-available">
+                                  <b>Strategies</b>
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-12">
+                      <div class="card">
+                          <div class="card-body">
+                            <h4 class="mb-2">Media Section</h4>
+                              <div style="height: 244px; overflow-y: scroll;">
+                               <ul>
+                                  <li>
+                                      <img src="https://static.independent.co.uk/2021/04/21/11/newFile-2.jpg?width=640&auto=webp&quality=75" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="http://www.blackstarnews.com/sites/default/files/styles/news-detail-page/public/field/image/Screenshot%202021-06-17%20at%2010-34-53%20Climate-Related%20Migration%20youtube%20-%20Google%20Search.png?itok=HCDmQT88" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="https://onlinepublichealth.gwu.edu/wp-content/uploads/sites/47/2021/03/54-Sources-for-Climate-Change-News-hero.jpeg?w=1024" style="width: 230px;">
+                                  </li>
+                               </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+             </div>
+            </div>
+                <div class="col-md-5 mb-3">
+                  <div id="accordion">
+                  <div class="card" style="min-width: 850px; background-color: #f8f9fa;">
+                      <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="box-shadow: none;">
+                        <div class="card-header" id="headingOne" style="background-color: white;">
+                          <h5 class="mb-0">
+                              Introduction
+                              <span style="position: relative; left: 320px; right: 10px;">
+                              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                              </span>
+                          </h5>
+                        </div>
+                      </button>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="max-width: 850px;">
+                      <div class="card-header" style="background-color: #f8f9fa;">
+                        Welcome to the Cliommit statistics page. Here you can monitor your carbon emissions and other statistics
+                          associated with performance in our program. This page provides comprehensive reports about your industry,
+                          your competitors and the impact you make through your investments.
+                      </div>
+                    </div>
+                      <div class="card" style="background-color: #f8f9fa;">
+                          <div class="card">
+                              <div class="card-body">
+                               <h5 class="mb-0">
+                                   Industry Benchmark
+                               </h5>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                              <div class="col-md-11 mb-4 ml-5">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="carbon-line" width="600" height="250"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <br>
+                              <div class="col-md-4 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="environment-line" width="600" height="450"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="social-line" width="600" height="450"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="governance-line" width="600" height="450"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                              <div class="card-body">
+                               <h5 class="mb-0">
+                                   Competitor Report
+                               </h5>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                              <div class="col-md-6 mb-4 ml-5">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="carbon-bar" width="600" height="450"></canvas>
+                                  </div>
+                                </div>
+                                  <br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="reduction-bar" width="600" height="450"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-5 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th scope="col"> </th>
+                                          <th scope="col">Top 5 companies</th>
+                                          <th scope="col">Score</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">1</th>
+                                          <td>Zalando SE</td>
+                                          <td>81</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">2</th>
+                                          <td>Cliommit UG</td>
+                                          <td>79</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">3</th>
+                                          <td>Lieferando AG</td>
+                                          <td>79</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">4</th>
+                                          <td>Get Your Guide</td>
+                                          <td>77</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">5</th>
+                                          <td>Kingfisher PLC</td>
+                                          <td>76</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                                  <br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="reduction-donut" width="600" height="585"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                              <div class="card-body">
+                               <h5 class="mb-0">
+                                   Impact Report
+                               </h5>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                              <div class="col-md-6 mb-4 ml-5">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="esg-dist-bar" width="600" height="523"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-5 mb-4">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <img src="{% static 'images/risk-scale.png'%}" height="80"/>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                MSCI Rating
+                                                <div class="circle">
+                                                  <div class="circle__inner">
+                                                    <div class="circle__wrapper">
+                                                       <div class="circle__content" style="color: white; font-size: 2em;">
+                                                           <h1 style="font-size: xxx-large;">A</h1>
+                                                       </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                Impact Score
+                                                <div class="circle">
+                                                  <div class="circle__inner">
+                                                    <div class="circle__wrapper">
+                                                       <div class="circle__content" style="color: white; font-size: 2em;">
+                                                           <h1 style="font-size: xxx-large;">79</h1>
+                                                       </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="col-md-11 mb-4 ml-5">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <canvas id="scopes-radar" width="600" height="550"></canvas>
+                                    </div>
+                                </div>
+                                <br>
+                              </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                              <div class="col-md-11 mb-4 ml-5">
+                                <div class="card">
+                                  <div class="card-body">
+                                      <h5 class="mb-0">
+                                       CO2 Reduction Performance Rankings
+                                    </h5><br>
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th scope="col">Rank</th>
+                                          <th scope="col">Name</th>
+                                          <th scope="col">Amount</th>
+                                          <th scope="col">Date</th>
+                                          <th scope="col">CO2 reduced</th>
+                                          <th scope="col">Yield</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">1</th>
+                                          <td>xyz</td>
+                                          <td>2.0 Million</td>
+                                          <td>15-04-2021</td>
+                                          <td>20%</td>
+                                          <td>61,000</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">2</th>
+                                          <td>abc</td>
+                                          <td>1.8 Million</td>
+                                          <td>17-04-2021</td>
+                                          <td>19%</td>
+                                          <td>57,000</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">3</th>
+                                          <td>You</td>
+                                          <td>1.75 Million</td>
+                                          <td>17-04-2021</td>
+                                          <td>18.6%</td>
+                                          <td>52,000</td>
+                                        </tr>
+                                      <tr>
+                                          <th scope="row">4</th>
+                                          <td>mno</td>
+                                          <td>1.7 Million</td>
+                                          <td>10-05-2021</td>
+                                          <td>17.9%</td>
+                                          <td>48,000</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+    </div>
+    </div>
+{% endblock %}
+{#cloud_sql_proxy.exe -instances="cliommit-mvp-318610:us-central1:cliommit-sql"=tcp:3306#}

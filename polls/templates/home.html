@@ -1,0 +1,410 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} home {% endblock %}
+{% block content %}
+<script>
+$(document).ready(function (){
+    var ctx = document.getElementById('pool-fund').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['J','F','M','A','M','J','J','A','S','O','N','D'],
+            datasets: [{
+                label: 'Value',
+                data: ['65','68','72','77','73','75','80','86','77','98','102','104'],
+                borderColor: '#00c9c6',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Pool fund forecast'
+        },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        display: true,
+                        labelString: 'Year: 2021'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+});
+$(document).ready(function (){
+    var ctx = document.getElementById('fund-donut').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['fund 1', 'fund 2', 'fund 3'],
+            datasets: [{
+                label: 'Kg/CO2 produced',
+                data: [8914.05,1155,3078],
+                backgroundColor: ['#52cbab','#f7931e','#818181']
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'SHARE NOW Fund Distribution'
+            }
+        }
+    });
+});
+</script>
+<div class="container" style="min-width: 1200px;">
+    <div class="main-body">
+          <!-- Breadcrumb -->
+            <nav class="navbar navbar-light bg-white sticky-top">
+                <a class="navbar-brand" href="https://www.cliommit.com/">
+                  <img src="{% static 'images/cliommit_logo_green.svg'%}" height="30" loading="lazy"/>
+                </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Edit Profile &emsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Settings &emsp;&emsp;<i class="fa fa-gear" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Help &emsp;&emsp;&emsp;&emsp;<i class="fa fa-question" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Log-out &emsp;&emsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+            </nav>
+            <br>
+          <!-- /Breadcrumb -->
+        <div class="row gutters-sm">
+         <div class="col-md-3 mb-3">
+             <div class="sticky-top" style="top:70px;">
+                <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center text-center">
+                          <div>
+                              <img type="image" src="{% static 'images/share-now.png'%}" alt="IMG" style="max-width: 250px;">
+                          </div>
+                          <div class="mt-3">
+                          <h4>SHARE NOW GmbH</h4>
+                          <p class="text-secondary mb-1">E-mobility</p>
+                          <p class="text-muted font-size-sm">Berlin, Germany</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                 <br>
+                <div class="row">
+                  <div class="col-12">
+                      <div class="card" style="background-color: #f8f9fa;">
+                          <div class="card-body">
+                            <div role="group" aria-label="Vertical button group" style="width: 100%;">
+                              <!--suppress CssInvalidPropertyValue -->
+                              <a href="" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Profile</b>
+                              </a>
+                              <a href="{% url 'polls:investments' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Investment Pool</b>
+                              </a>
+                              <a href="{% url 'polls:investments_private' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Investment Portfolios</b>
+                              </a>
+                              <a href="{% url 'polls:statistics' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Analytics</b>
+                              </a>
+                              <a href="{% url 'polls:strategies'%}" class="btn button-new" style="min-width:-webkit-fill-available">
+                                  <b>Strategies</b>
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                 <br>
+                <div class="row">
+                  <div class="col-12">
+                      <div class="card">
+                          <div class="card-body">
+                            <h4 class="mb-2">Media Section</h4>
+                              <div style="height: 150px; overflow-y: scroll;">
+                               <ul>
+                                  <li>
+                                      <img src="https://static.independent.co.uk/2021/04/21/11/newFile-2.jpg?width=640&auto=webp&quality=75" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="http://www.blackstarnews.com/sites/default/files/styles/news-detail-page/public/field/image/Screenshot%202021-06-17%20at%2010-34-53%20Climate-Related%20Migration%20youtube%20-%20Google%20Search.png?itok=HCDmQT88" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="https://onlinepublichealth.gwu.edu/wp-content/uploads/sites/47/2021/03/54-Sources-for-Climate-Change-News-hero.jpeg?w=1024" style="width: 230px;">
+                                  </li>
+                               </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 mb-3">
+                <div id="accordion">
+                  <div class="card" style="min-width: 850px; background-color: #f8f9fa;">
+                      <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="box-shadow: none;">
+                        <div class="card-header" id="headingOne" style="background-color: white;">
+                          <h5 class="mb-0">
+                              Introduction
+                              <span style="position: relative; left: 320px; right: 10px;">
+                              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                              </span>
+                          </h5>
+                        </div>
+                      </button>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="max-width: 850px;">
+                      <div class="card-header" style="background-color: #f8f9fa;">
+                        Welcome to the Cliommit platform where we offer a selection of curated green funds and bonds.
+                        The dividends that you receive from your investments are redistributed between your pool based
+                        on your companies CO2 emissions
+                      </div>
+                    </div>
+                      <div class="row">
+                          <div class="col-md-12 ml-0">
+                              <div class="card card-body">
+                                  <div class="row">
+                                  <div class="col-md-5 mb-3 ml-4">
+                                      <img type="image" src="{% static 'images/share-now.png'%}" alt="IMG" style="max-width: -webkit-fill-available;">
+                                  <br><br>
+                                    SHARE NOW GmbH is a German carsharing company, formed from the merger of car2go and
+                                      DriveNow. It is a joint venture of Daimler AG and BMW providing carsharing services
+                                      in urban areas in Europe.
+                                  </div>
+                                  <div class="col-md-6 ml-3 mb-0">
+                                      <ul class="list-group list-group-flush">
+                                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                            <h6 class="mb-0">Registry number</h6>
+                                            <span class="text-secondary">HRB 213714B</span>
+                                          </li>
+                                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                            <h6 class="mb-0">Number of employees</h6>
+                                            <span class="text-secondary">521</span>
+                                          </li>
+                                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                            <h6 class="mb-0">Years operational</h6>
+                                            <span class="text-secondary">9</span>
+                                          </li>
+                                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                            <h6 class="mb-0">Headquarters</h6>
+                                            <span class="text-secondary">{{ user.address }}</span>
+                                          </li>
+                                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+                                            <span class="text-secondary">www.share-now.com</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card" style="background-color: #f8f9fa;">
+                          <br>
+                          <div class="card">
+                              <div class="card-body">
+                               <h5 class="mb-0">
+                                   Investment Report
+                               </h5>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                              <div class="col-md-3 mb-4 ml-5">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          Carbon Performance Rating:
+                                          <br><br>
+                                          <h4><b>65%</b></h4>
+                                          <br><br>
+                                          <span class="fa fa-star" style="color: orange"></span>
+                                          <span class="fa fa-star" style="color: orange"></span>
+                                          <span class="fa fa-star" style="color: orange"></span>
+                                          <span class="fa fa-star"></span>
+                                          <span class="fa fa-star"></span><br><br>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-3 mb-4">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          Your Current Yield:
+                                          <br><br>
+                                          <b>0.346%</b>
+                                      </div>
+                                  </div>
+                                  <br>
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          Estimated Net Return:
+                                          <br><br>
+                                          <b>€280,345.00</b>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-5 mb-4">
+                                  <div class="card">
+                                      <div class="card-body">
+                                          <canvas id="pool-fund" width="600" height="450"></canvas>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                              <div class="card-body">
+                               <h5 class="mb-0">
+                                   Pool Summary
+                               </h5>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                              <div class="col-md-3 mb-4 ml-5">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          Assigned Pool Number:
+                                          <br><br>
+                                          <b>23</b>
+                                      </div>
+                                  </div>
+                                  <br>
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          Pool Participants:
+                                          <br><br>
+                                          <b>85</b>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-4 mb-4">
+                                  <div class="card mb-3">
+                                      <div class="card-body text-center">
+                                          <br>
+                                          Total Combined Investment
+                                          <br><br>
+                                          <h5><b>€39.000.000</b></h5>
+                                          <br>
+                                      </div>
+                                  </div>
+                                  <a href="{% url 'polls:investments' %}" class="btn button-new" style="min-width:-webkit-fill-available; padding: 20px; min-height: 55px;">Go To Investment Pool</a>
+                              </div>
+                              <div class="col-md-4 mb-4">
+                                  <div class="card">
+                                      <div class="card-body">
+                                          <canvas id="fund-donut" width="600" height="450"></canvas>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                              <div class="card-body">
+                               <h5 class="mb-0">
+                                   Impact
+                               </h5>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                              <div class="col-md-4 mb-4 ml-5">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          <br>
+                                          Annual Carbon Emissions
+                                          <br><br>
+                                          <h5 style="color: orange"><b>1543327 Co2e</b></h5>
+                                          <br><br>
+                                          Carbon Emission Target
+                                          <br><br>
+                                          <h5 style="color: orange"><b>1538942 Co2e</b></h5>
+                                          <br>
+                                          <a href="{% url 'polls:investments_private' %}" class="btn button-new mt-2" style="min-width:-webkit-fill-available; padding: 13px; min-height: 40px;">Go To Investment Page</a>
+                                          <br>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-4 mb-4">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          <br>
+                                          Pool Carbon Goal by
+                                          <br>
+                                          27-04-2022
+                                          <br><br>
+                                          <h5 style="color: orange"><b>10.000 mT Co2e</b></h5>
+                                          <br><br>
+                                          Your Pool's Reduction on
+                                          <br>
+                                          30-08-2021
+                                          <br><br>
+                                          <h5 style="color: orange" class="mb-2"><b>3200 mT Co2e</b></h5>
+                                          <br>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-3 mb-4">
+                                  <div class="card">
+                                      <div class="card-body text-center"><br>
+                                          Impact Locations:
+                                          <br><br>
+                                          Bavaria, Solar Farms<br>
+                                          Berlin, Green Energy Fund<br>
+                                          Carbon Capture Tech GmbH<br>
+                                          <br>
+                                          You have assisted in reduction of
+                                          <br>
+                                          <b>850.000 mT Co2e</b>
+                                          <br>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-11 mb-4 ml-5">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          Your Carbon Reduction Progress
+                                          <br>
+                                          <span style="right: 10px; color: gold;">
+                                            <i class="fa fa-trophy float-right" aria-hidden="true"></i>
+                                          </span>
+                                          <span style=" position: relative; right: 250px; color: silver;">
+                                            <i class="fa fa-trophy float-right mr-5" aria-hidden="true"></i>
+                                          </span>
+                                          <span style=" position: relative; right: 450px; color: chocolate;">
+                                            <i class="fa fa-trophy float-right mr-5" aria-hidden="true"></i>
+                                          </span>
+                                          <br>
+                                          <div class="progress">
+                                              <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%; height: 20px;">
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+{% endblock %}

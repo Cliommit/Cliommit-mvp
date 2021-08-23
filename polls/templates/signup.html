@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} signup {% endblock %}
+{% block content %}
+
+
+<div class="container-login100">
+    <div class="wrap-login100">
+        <form action="{% url 'polls:addUser' %}" method="post">
+
+        {% csrf_token %}
+        <span class="login100-form-title">
+        SIGN UP
+        </span>
+
+        <section id="testsection">
+            <div class="inner">
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Enter company name">
+                        {{form.company}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-industry" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                        {{form.password}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        {{form.email}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Enter phone number">
+                        {{form.phone}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <button id="testbutton" type="button" class="login100-form-btn" onclick="toggleV('testsection'); toggleV('testsection2');"> NEXT </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <h4></h4>
+        <section id="testsection2" style="display:none">
+            <div class="inner">
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Enter country">
+                        {{form.country}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-map-signs" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Enter company address">
+                        {{form.address}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-map-pin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Enter reg number">
+                        {{form.reg_no}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-id-badge" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Enter num of employees">
+                        {{form.employees}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-group" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Enter company sector">
+                        {{form.sector}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-gears" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input" data-validate = "Enter annual turnover">
+                        {{form.turnover}}
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-euro" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <button type="button" class="login100-form-btn" onclick="toggleV('testsection2'); toggleV('testsection');"> BACK </button>
+                    </div>
+                    <div>
+                        <input type="submit" value="Register" class="login100-form-btn">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </form>
+        <div class="card" style="width: 18rem; background: #e2e8f0;">
+          <div class="card-body">
+            <h5 class="card-title">Cliommit Process</h5>
+              <div class="pre-scrollable">
+                  <p class="card-text">Here, you will find the instructions to follow to fill up this form. Start with your
+                company name and provide a password to your organization. Similarly, fill the rest of given fields.
+                If there are any issues in this process, do not hesitate to contact Cliommit. By clicking on register
+                you are agreeing to the terms and conditions provided by Cliommit. PLease be careful while filling the
+                form fields, any incorrect values entered could lead to difficulties during the auditing period. This
+                form also acts as a digital signature for the agreement. the next step to this would filling up of the
+                carbon disclosure form that you will find in your profile page.</p>
+              </div>
+          </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

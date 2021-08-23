@@ -1,0 +1,513 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Your Pool {% endblock %}
+{% block content %}
+    <script>
+$(document).ready(function (){
+    var ctx = document.getElementById('pool-ratings').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['A', 'You', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
+            datasets: [{
+                label: 'Carbon Emissions',
+                data: [2.3, 4.1, 3.3, 4.6, 5, 2.8, 3.8, 4.3, 5, 3],
+                backgroundColor: '#00c9c6',
+            },
+            {
+                label: 'Carbon Cap Difference',
+                data: [2.7, 0.9, 1.7, 0.4, 0, 2.2, 1.2, 0.7, 0, 2],
+                backgroundColor: '#c0c2db',
+            },
+            {
+                label: 'Carbon Surplus',
+                data: [0, 0, 0, 0, 1.3, 0, 0, 0, 1.8, 0],
+                backgroundColor: '#f7931e',
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'User Pool Ratings'
+        },
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                    gridLines: {
+                        display: false,
+                    }
+                }],
+                yAxes: [{
+                    stacked: true,
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    type: 'linear',
+                }]
+            }
+        }
+    });
+});
+$(document).ready(function (){
+    var ctx = document.getElementById('participants-redist').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['A', 'You', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
+            datasets: [{
+                label: 'GHG Emission Change',
+                data: [-2.3, 4.1, 3.3, -4.6, 6.3, 2.8, 3.8, -4.3, -6.8, 3],
+                backgroundColor: ['#f7931e','#f7931e','#f7931e','#f7931e', '#f7931e','#f7931e','#f7931e','#f7931e','#f7931e','#f7931e']
+            },
+            {
+                label: 'Return Yield',
+                data: [4.8, 6.2, 5.9, 4.4, 6.8, 6.0, 6.1, 4.1, 2.3, 6.2],
+                backgroundColor: ['#00c9c6','#00c9c6','#00c9c6','#00c9c6', '#00c9c6','#00c9c6','#00c9c6','#00c9c6','#00c9c6','#00c9c6']
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Participant Redistribution'
+            }
+        }
+    });
+});
+
+$(document).ready(function (){
+    var ctx = document.getElementById('pool-fund').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['','','','','','','','','','','',''],
+            datasets: [{
+                label: 'Value',
+                data: ['65','68','72','77','73','75','80','86','77','98','102','104'],
+                borderColor: '#00c9c6',
+                fill: false
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+            display: true,
+            text: 'Pool fund forecast'
+        },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        display: true,
+                        labelString: 'Year: 2021'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+});
+    </script>
+    <div class="container" style="min-width: 1200px;">
+    <div class="main-body">
+        <nav class="navbar navbar-light bg-white sticky-top">
+                <a class="navbar-brand" href="https://www.cliommit.com/">
+                  <img src="{% static 'images/cliommit_logo_green.svg'%}" height="30" loading="lazy"/>
+                </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Edit Profile &emsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Settings &emsp;&emsp;<i class="fa fa-gear" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Help &emsp;&emsp;&emsp;&emsp;<i class="fa fa-question" aria-hidden="true"></i></a>
+                      <a class="dropdown-item" href="#">Log-out &emsp;&emsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+            </nav>
+        <br>
+        <div class="row gutters-sm">
+        <div class="col-md-3 mb-3">
+           <div class="sticky-top" style="top:70px;">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                      <div>
+                          <img type="image" src="{% static 'images/share-now.png'%}" alt="IMG" style="max-width: 250px;">
+                      </div>
+                  </div>
+                </div>
+              </div>
+            <br>
+              <div class="row">
+                  <div class="col-12">
+                      <div class="card" style="background-color: #f8f9fa;">
+                          <div class="card-body">
+                            <div role="group" aria-label="Vertical button group" style="width: 100%;">
+                              <!--suppress CssInvalidPropertyValue -->
+                              <a href="{% url 'polls:home' id=1%}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Profile</b>
+                              </a>
+                              <a href="" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Investment Pool</b>
+                              </a>
+                              <a href="{% url 'polls:investments_private' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Investment Portfolios</b>
+                              </a>
+                              <a href="{% url 'polls:statistics' %}" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Your Analytics</b>
+                              </a>
+                              <a href="{% url 'polls:strategies'%}" class="btn button-new" style="min-width:-webkit-fill-available">
+                                  <b>Strategies</b>
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            <br>
+              <div class="row">
+                  <div class="col-12">
+                      <div class="card">
+                          <div class="card-body">
+                            <h4 class="mb-2">Media Section</h4>
+                              <div style="height: 244px; overflow-y: scroll;">
+                               <ul>
+                                  <li>
+                                      <img src="https://static.independent.co.uk/2021/04/21/11/newFile-2.jpg?width=640&auto=webp&quality=75" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="http://www.blackstarnews.com/sites/default/files/styles/news-detail-page/public/field/image/Screenshot%202021-06-17%20at%2010-34-53%20Climate-Related%20Migration%20youtube%20-%20Google%20Search.png?itok=HCDmQT88" style="width: 230px;">
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <img src="https://onlinepublichealth.gwu.edu/wp-content/uploads/sites/47/2021/03/54-Sources-for-Climate-Change-News-hero.jpeg?w=1024" style="width: 230px;">
+                                  </li>
+                               </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+           </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div id="accordion">
+               <div class="card" style="min-width: 850px; background-color: #f8f9fa;">
+                  <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="box-shadow: none;">
+                        <div class="card-header" id="headingOne" style="background-color: white;">
+                          <h5 class="mb-0">
+                              Introduction
+                              <span style="position: relative; left: 320px; right: 10px;">
+                              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                              </span>
+                          </h5>
+                        </div>
+                      </button>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="max-width: 850px;">
+                      <div class="card-header" style="background-color: #f8f9fa;">
+                        Welcome to your investment pool, here you will find other participants who you have been grouped with according to your company information.
+                        <br>
+                        You can choose to see how you benchmark against the group average, see how your carbon investments are fairing and the amount of interest you will gain from the group
+                      </div>
+                    </div>
+                      <div class="card" style="background-color: #f8f9fa;">
+                          <div class="card">
+                              <div class="card-body">
+                               <h5 class="mb-0">
+                                   Your Company ROI
+                               </h5>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                              <div class="col-md-3 mb-4 ml-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   Company Emissions: <br><br>
+                                      <b>8.3 mtCO2e</b>
+                                      <br>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Estimated ROI: <br><br>
+                                      <b>680,000.00 euros</b>
+                                      <br>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Outstanding contribution: <br><br>
+                                     <b> 80,000.00 euros </b>
+                                      <br>
+                                  </div>
+                                </div><br>
+                                <a href="" class="btn button-new mb-3" style="min-width:-webkit-fill-available">
+                                  <b>Invest</b>
+                                </a>
+                              </div>
+                              <div class="col-md-8 mb-3 ml-3">
+                                <div class="card">
+                                  <div class="card-body">
+                                      <div class="d-flex justify-content-between">Performance rating<div class="text-secondary">56%</div></div>
+                                      <div class="d-flex justify-content-between">Personal yield based on performance<div class="text-secondary">-1.1%</div></div>
+                                      <div class="d-flex justify-content-between">Invested Principle<div class="text-secondary">€ 5 Million</div></div>
+                                      <div class="d-flex justify-content-between">Company redistributed return based on performance<div class="text-secondary">€ 5.1 Million</div></div>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                    <h5 class="mb-0">
+                                       Competing Pools
+                                    </h5><br>
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th scope="col">#</th>
+                                          <th scope="col">Impact Score</th>
+                                          <th scope="col">ROI</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">Pool 1</th>
+                                          <td>8.6</td>
+                                          <td>2,000,000</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">Pool 5</th>
+                                          <td>8.3</td>
+                                          <td>6,000,000</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">Pool 6</th>
+                                          <td>8.2</td>
+                                          <td>3,200,000</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                              <div class="card-body">
+                               <h5 class="mb-0">
+                                   Your Pool
+                               </h5>
+                              </div>
+                          </div><br>
+                          <div class="row">
+                              <div class="col-md-3 mb-4 ml-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   Combined Assets: <br><br>
+                                      <b>€ 23.2 M</b><br>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Carbon Cap: <br><br>
+                                      <b>5 mtCO2e</b><br>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Pool APY Estimate: <br><br>
+                                      <b>5.8%</b><br>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                      <b>Legend:</b> <br><br>
+                                      <a style="font-size: smaller">Emissions</a><div style="height: 10px; width: 65px; background-color: #00c9c6;"></div>
+                                      <a style="font-size: smaller">Difference</a><div style="height: 10px; width: 65px; background-color: #c0c2db;"></div>
+                                      <a style="font-size: smaller">Surplus</a><div style="height: 10px; width: 65px; background-color: #f7931e;"></div><br>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Impact Score: <br><br>
+                                      <b>7.5</b>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="pool-ratings" width="600" height="450"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                              <div class="col-md-3 mb-4 ml-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   Pool participants: <br><br>
+                                      <b>10</b><br>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Redistribution average: <br><br>
+                                      <b>€ 980,000.00</b><br>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Average Pool CO2: <br><br>
+                                      <b>4.5 mtCO2e</b><br>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2 mb-4">
+                                <div class="card mb-2">
+                                  <div class="card-body">
+                                      <b>Legend:</b> <br><br>
+                                      <a style="font-size: x-small">Return Yield</a><div style="height: 10px; width: 65px; background-color: #00c9c6;"></div><br>
+                                      <a style="font-size: x-small">GHG Emission Change</a><div style="height: 10px; width: 65px; background-color: #f7931e;"></div><br>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Return Rate: <br><br>
+                                      <b>9%</b><br>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="participants-redist" width="600" height="450"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                          </div><br><br>
+                          <div class="row">
+                              <div class="col-md-3 mb-4 ml-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   Estimated Return: <br><br>
+                                      <b>€ 7,600,000.00</b>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Quarterly Performance: <br>
+                                      <b>32%</b>
+                                  </div>
+                                </div><br>
+                                <div class="card">
+                                  <div class="card-body">
+                                   Dividend Share: <br><br>
+                                      <b>18%</b>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2 mb-4 ">
+                                <div class="card">
+                                  <div class="card-body">
+                                      <b>Legend:</b> <br><br>
+                                      <a class="mb-3" style="font-size: x-small">Value (in €)</a><br>
+                                      <div class="mt-3" style="height: 10px; width: 65px; background-color: #00c9c6;"></div><br>
+                                      <a style="font-size: x-small">Year: <b>2021</b></a><br><br>
+                                  </div>
+                                </div><br>
+                                <div class="card mt-1">
+                                  <div class="card-body">
+                                   ESG Rating: <br><br>
+                                      <b>AAA</b><br><br>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                   <canvas id="pool-fund" width="600" height="450"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                              <div class="col-md-11 mb-4 ml-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                      <h5 class="mb-0">
+                                       CO2 Reduction Performance Rankings
+                                    </h5><br>
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th scope="col">Rank</th>
+                                          <th scope="col">Name</th>
+                                          <th scope="col">Amount</th>
+                                          <th scope="col">Date</th>
+                                          <th scope="col">CO2 reduced</th>
+                                          <th scope="col">Yield</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">1</th>
+                                          <td>xyz</td>
+                                          <td>2.0 Million</td>
+                                          <td>15-04-2021</td>
+                                          <td>20%</td>
+                                          <td>61,000</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">2</th>
+                                          <td>abc</td>
+                                          <td>1.8 Million</td>
+                                          <td>17-04-2021</td>
+                                          <td>19%</td>
+                                          <td>57,000</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">3</th>
+                                          <td>You</td>
+                                          <td>1.75 Million</td>
+                                          <td>17-04-2021</td>
+                                          <td>18.6%</td>
+                                          <td>52,000</td>
+                                        </tr>
+                                      <tr>
+                                          <th scope="row">4</th>
+                                          <td>mno</td>
+                                          <td>1.7 Million</td>
+                                          <td>10-05-2021</td>
+                                          <td>17.9%</td>
+                                          <td>48,000</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+{% endblock %}

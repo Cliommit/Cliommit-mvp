@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} carbon register {% endblock %}
+{% block content %}
+
+        <div class="container-login100">
+                <form id="regForm" action="{% url 'polls:addCarbonData' %}" method="post">
+                    {% csrf_token %}
+{#                    <div class="login100-pic js-tilt" data-tilt>#}
+{#					    <img type="image" src="{% static 'images/cliommit_logo.svg'%}" alt="IMG">#}
+{#                    </div>#}
+                    <span class="login100-form-title">
+                    {{ registry.company }}<br> FILL-IN YOUR CARBON DATA
+                    </span>
+                    <div class="tab">
+                        <h2 class="login100-form-title">Company Facilities: Quarterly Energy Consumption</h2><br><br>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                <p>
+                                    <label>Do you use renewable energy sources?</label>
+                                </p>
+                                {{form.electricity_renewable}}
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.electricity_amount}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.electricity_provider}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.electricity_type}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.electricity_heating}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.electricity_gas}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <h2>Travel</h2><br><br>
+                        <h5>Air Travel:</h5>
+                        <br>
+                        <p>
+                            <label>How many long and short flights have you taken in the last 3 months?</label>
+                        </p>
+                        <br>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_air_travel_long}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_air_travel_short}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                <p>
+                                    <input type="radio" id="oneWay" name="trip" value="OneWay">
+                                    <label for="oneWay">One-way</label>
+                                    <input type="radio" id="return" name="trip" value="Return">
+                                    <label for="return">Return</label>
+                                    <br>
+                                    <select name="airTravelFrom" oninput="this.className = ''">
+                                        <option>From</option>
+                                        <option value="excellent">Germany</option>
+                                        <option value="good">France</option>
+                                        <option value="ok">United States</option>
+                                        <option value="poor">China</option>
+                                        <option value="bad">United Kingdom</option>
+                                    </select>
+                                    <select name="airTravelTo" oninput="this.className = ''">
+                                        <option>To</option>
+                                        <option value="excellent">Germany</option>
+                                        <option value="good">France</option>
+                                        <option value="ok">United States</option>
+                                        <option value="poor">China</option>
+                                        <option value="bad">United Kingdom</option>
+                                    </select>
+                                    <select name="travelClass" oninput="this.className = ''">
+                                        <option>Class</option>
+                                        <option value="excellent">Economy</option>
+                                        <option value="good">Business</option>
+                                        <option value="ok">First</option>
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h5>Internal Automobile Use:</h5>
+                        <div>
+                            <select name="rankingsel" oninput="this.className = ''">
+                                <option>Vehicle Type</option>
+                                <option value="excellent">Petrol</option>
+                                <option value="good">Diesel</option>
+                                <option value="ok">CNG</option>
+                                <option value="poor">LPG</option>
+                                <option value="bad">Electric</option>
+                            </select>
+                            <br><br>
+                            <div class="form-row">
+                                <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                    {{form.travel_automobile_mileage}}
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                    {{form.travel_automobile_commute}}
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h5>Land Travel:</h5>
+                        <br>
+                        <p>
+                            <label>How many employees use the following transport to commute to work?</label>
+                        </p>
+                        <br>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_bus}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_coach}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_train}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_int_train}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_subway}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_tram}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_taxi}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h5>Travel Accommodation:</h5>
+                        <br>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_accommodation_hotel}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_accommodation_motel}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.travel_accommodation_airbnb}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <h2>Office</h2><br><br>
+                        <h5>Utilities:</h5>
+                        <br>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.office_utilities_desktop}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.office_utilities_laptop}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h5>Waste disposal (does not include recycling) :</h5>
+                        <br>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.office_waste_bio}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.office_waste_general}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h5>Water:</h5>
+                        <br>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input" data-validate = "Value is required">
+                                {{form.office_water}}
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="overflow:auto;">
+                        <div style="float:right;">
+                            <button class="login100-form-btn" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button class="login100-form-btn" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                            <input type="submit" id="submitBtn" class="login100-form-btn" value="Register" style="display:none">
+                        </div>
+                    </div>
+                    <div style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div>
+                </form>
+        </div>
+
+{% endblock %}
